@@ -13,20 +13,27 @@
     gap: 2rem;
     width: fit-content;
     padding: 1.5rem;
-    .return-block {
-      border-bottom: 2px solid #ffffff00;
-      cursor: default;
-      font-size: 14px;
+    .top {
+      box-sizing: border-box;
       display: flex;
-      align-items: center;
       justify-content: flex-start;
-      gap: 0.5rem;
-      max-width: 3.25rem;
-      &:hover {
-        border-bottom: 2px solid #3c71ff;
-      }
-      .text {
-        height: 1rem;
+      width: 100%;
+      .return-block {
+        border-bottom: 2px solid #ffffff00;
+        cursor: default;
+        font-size: 14px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        max-width: 100%;
+        &:hover {
+          border-bottom: 2px solid #3c71ff;
+        }
+        .text {
+          height: 1rem;
+        }
       }
     }
     .content {
@@ -199,7 +206,7 @@
 
 .icon-view-hide,
 .icon-check-circle {
-  background: #ababab !important;
+  background: #ababab;
 }
 
 .title {
@@ -272,14 +279,22 @@ input[type="checkbox"] {
     width: 100%;
     .sign-up--form {
       box-sizing: border-box;
+      align-items: center;
       height: 100%;
       width: 100%;
       padding: 1.5rem 0;
-      .return-block {
-        margin: 0 1.5rem;
+      .top {
+        padding-left: 1.5rem;
       }
       .content {
         padding: 0 0.5rem;
+        .top-section {
+          .buttons-block {
+            .button {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
