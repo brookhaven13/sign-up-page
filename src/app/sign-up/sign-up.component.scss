@@ -25,13 +25,16 @@
       &:hover {
         border-bottom: 2px solid #3c71ff;
       }
+      .text {
+        height: 1rem;
+      }
     }
     .content {
-      box-sizing: border-box;
       font-size: 14px;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      max-width: 400px;
       padding: 0 5rem;
       .top-section {
         display: flex;
@@ -82,6 +85,7 @@
           }
         }
       }
+
       .input-field-section {
         display: flex;
         flex-direction: column;
@@ -132,9 +136,47 @@
                   display: flex;
                   align-items: center;
                   gap: 0.25rem;
+                  .text {
+                    height: 0.75rem;
+                  }
                 }
               }
             }
+          }
+        }
+      }
+
+      .submit-section {
+        color: #757575;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        .agreement-block {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+        }
+        .button {
+          background: #3c71ff;
+          border: none;
+          border-radius: 4px;
+          box-shadow: 0px 6px 15px 0px #3c71ff66;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 3rem;
+          width: 100%;
+        }
+        .link {
+          color: #3c71ff;
+          cursor: default;
+          font-weight: 700;
+          &:hover {
+            border-bottom: 2px solid #3c71ff;
           }
         }
       }
@@ -171,7 +213,9 @@
   }
 }
 
-input {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   background: #f1f5ff;
   box-sizing: border-box;
   border: none;
@@ -180,6 +224,43 @@ input {
   line-height: 18px;
   width: 100%;
   padding: 1rem 0.75rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background: #ababab;
+  border: 1px solid #ababab;
+  border-radius: 2px;
+  cursor: pointer;
+  min-height: 18px;
+  min-width: 18px;
+  margin: 0;
+  position: relative;
+  &:checked {
+    background: #fff;
+    border: 1px solid #3c71ff;
+    transition: 0.1s ease-in-out;
+    &::before {
+      background: #3c71ff;
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 2px;
+      height: 2px;
+      width: 6px;
+      transform: rotate(45deg);
+    }
+    &::after {
+      background: #3c71ff;
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 5px;
+      height: 2px;
+      width: 10px;
+      transform: rotate(-48deg);
+    }
+  }
 }
 
 @import "../app.component.scss";
