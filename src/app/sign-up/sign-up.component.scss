@@ -78,10 +78,13 @@
           justify-content: flex-start;
           gap: 0.5rem;
           width: 100%;
+          .text {
+            white-space: nowrap;
+          }
           .line {
             background: #000;
             height: 1px;
-            width: 46%;
+            width: 100%;
           }
         }
       }
@@ -259,6 +262,25 @@ input[type="checkbox"] {
       height: 2px;
       width: 10px;
       transform: rotate(-48deg);
+    }
+  }
+}
+
+/* Responsive Settings */
+@media (max-width: 576px) {
+  .sign-up {
+    width: 100%;
+    .sign-up--form {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      padding: 1.5rem 0;
+      .return-block {
+        margin: 0 1.5rem;
+      }
+      .content {
+        padding: 0 0.5rem;
+      }
     }
   }
 }
