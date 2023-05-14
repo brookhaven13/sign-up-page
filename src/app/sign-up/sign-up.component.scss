@@ -1,0 +1,185 @@
+.sign-up {
+  background: #f1f5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  .sign-up--form {
+    background: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: fit-content;
+    padding: 1.5rem;
+    .return-block {
+      border-bottom: 2px solid #ffffff00;
+      cursor: default;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      max-width: 3.25rem;
+      &:hover {
+        border-bottom: 2px solid #3c71ff;
+      }
+    }
+    .content {
+      box-sizing: border-box;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0 5rem;
+      .top-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .title-block {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .buttons-block {
+          display: flex;
+          gap: 1.25rem;
+          .button {
+            background: #fff;
+            border: 1px solid #3c71ff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.75rem;
+            height: 3rem;
+            width: 190px;
+            padding: 1rem 0.75rem;
+            &:hover {
+              background: #3c71ff;
+              box-shadow: 0px 6px 15px 0px #3c71ff66;
+              color: #fff;
+              .icon-facebook,
+              .icon-google {
+                background: #fff !important;
+              }
+            }
+          }
+        }
+        .desc-block {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 0.5rem;
+          width: 100%;
+          .line {
+            background: #000;
+            height: 1px;
+            width: 46%;
+          }
+        }
+      }
+      .input-field-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .row {
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+          width: 100%;
+          .input-field--item {
+            position: relative;
+            width: 100%;
+            .placeholder {
+              color: #757575;
+              font-size: 14px;
+              pointer-events: none;
+              position: absolute;
+              left: 0.8rem;
+              top: 35%;
+              opacity: 0;
+              transition: 0.1s ease all;
+            }
+            input:not(:placeholder-shown) {
+              padding: 1.3rem 0.75rem 0.7rem;
+              & ~ .placeholder {
+                font-size: 10px;
+                top: 4px;
+                opacity: 1;
+              }
+            }
+            .icon-view-hide {
+              cursor: pointer;
+              position: absolute;
+              top: 1rem;
+              right: 1rem;
+            }
+            &.password {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              .notification-section {
+                box-sizing: border-box;
+                color: #757575;
+                font-size: 10px;
+                display: flex;
+                gap: 0.75rem;
+                .notification--item {
+                  display: flex;
+                  align-items: center;
+                  gap: 0.25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* common use styles */
+.icon-google,
+.icon-facebook {
+  background: #3c71ff !important;
+}
+
+.icon-arrow-left {
+  background: #000 !important;
+}
+
+.icon-view-hide,
+.icon-check-circle {
+  background: #ababab !important;
+}
+
+.title {
+  font-weight: 700;
+  &--main {
+    @extend .title;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  &--sub {
+    @extend .title;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+input {
+  background: #f1f5ff;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+  padding: 1rem 0.75rem;
+}
+
+@import "../app.component.scss";

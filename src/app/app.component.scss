@@ -1,0 +1,47 @@
+%icon {
+  background: inherit;
+  mask-size: contain !important;
+  mask-position: center !important;
+  mask-repeat: no-repeat !important;
+}
+
+.icon-sm {
+  /* 12px */
+  @extend %icon;
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.icon-base {
+  /* 16px */
+  @extend %icon;
+  height: 1rem;
+  width: 1rem;
+}
+
+.icon-lg {
+  /* 20px */
+  @extend %icon;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.icon-arrow-left {
+  mask: url("../assets/img/ico-arrow-left.svg");
+}
+
+.icon-check-circle {
+  mask: url("../assets/img/ico-check-circle.svg");
+}
+
+.icon-view-hide {
+  mask: url("../assets/img/ico-view-hide.svg");
+}
+
+.icon-google {
+  mask: url("../assets/img/ico-google.svg");
+}
+
+.icon-facebook {
+  mask: url("../assets/img/ico-facebook.svg");
+}
