@@ -13,14 +13,16 @@
           <span class="title--main">Create an account</span>
         </div>
         <div class="buttons-block">
-          <button class="button">
-            <div class="icon-google icon-base"></div>
-            <span>Sign up with Google</span>
-          </button>
-          <button class="button">
-            <div class="icon-facebook icon-base"></div>
-            <span>Sign up with Google</span>
-          </button>
+          <app-button 
+            [iconName]="'icon-google'" 
+            [iconSize]="'icon-base'" 
+            [text]="'Sign up with Google'"
+          ></app-button>
+          <app-button
+            [iconName]="'icon-facebook'"
+            [iconSize]="'icon-base'"
+            [text]="'Sign up with Facebook'"
+          ></app-button>
         </div>
         <div class="desc-block">
           <span class="text"> Or use your email for registration </span>

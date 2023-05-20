@@ -55,29 +55,6 @@
         .buttons-block {
           display: flex;
           gap: 1.25rem;
-          .button {
-            background: #fff;
-            border: 1px solid #3c71ff;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 0.75rem;
-            height: 3rem;
-            width: 190px;
-            padding: 1rem 0.75rem;
-            &:hover {
-              background: #3c71ff;
-              box-shadow: 0px 6px 15px 0px #3c71ff66;
-              color: #fff;
-              .icon-facebook,
-              .icon-google {
-                background: #fff !important;
-              }
-            }
-          }
         }
         .desc-block {
           display: flex;
@@ -196,11 +173,6 @@
 }
 
 /* common use styles */
-.icon-google,
-.icon-facebook {
-  background: #3c71ff !important;
-}
-
 .icon-arrow-left {
   background: #000 !important;
 }
