@@ -29,6 +29,7 @@ export class SignUpComponent {
           Validators.pattern(/\d/), // check at least one number
         ],
       ],
+      isChecked: [false, Validators.requiredTrue]
     });
   }
 
@@ -38,6 +39,10 @@ export class SignUpComponent {
     } else {
       console.log('error, please fill all the field before submitting form');
     }
+  }
+
+  checkPassword(condition: string) {
+    return !this.password?.errors?.[condition] && this.password?.value != '';
   }
 
   get password() {

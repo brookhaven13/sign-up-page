@@ -126,11 +126,12 @@
                 opacity: 1;
               }
             }
-            .icon-view-hide {
+            .view-hide-button {
               cursor: pointer;
               position: absolute;
-              top: 1rem;
-              right: 1rem;
+              right: 0rem;
+              padding: 1rem;
+              z-index: 99 !important;
             }
             &.password {
               display: flex;
@@ -271,6 +272,10 @@ input[type="checkbox"] {
       transform: rotate(-48deg);
     }
   }
+}
+
+input[type=password]::-ms-reveal {
+  display: none;
 }
 
 /* Responsive Settings */

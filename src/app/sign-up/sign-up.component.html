@@ -59,24 +59,26 @@
               [type]="isPasswordVisible ? 'text' : 'password'"
               placeholder="Password"
             />
-            <div
-              class="icon-lg icon-view-hide"
-              [style.background]="isPasswordVisible ? '#3c71ff' : '#ababab'"
-              (click)="isPasswordVisible = !isPasswordVisible"
-            ></div>
+            <div class="view-hide-button">
+              <div
+                class="icon-lg icon-view-hide"
+                [style.background]="isPasswordVisible ? '#3c71ff' : '#ababab'"
+                (click)="isPasswordVisible = !isPasswordVisible"
+              ></div>
+            </div>
             <span class="placeholder">Password</span>
-            <div class="notification-section">
+            <div class="notification-section" *ngIf="this.signUpForm.invalid">
               <div class="notification--item">
                 <span
                   class="icon-sm icon-check-circle"
-                  [style.background]="!password?.errors?.['minlength'] ? '#4ae7a5' : '#ababab'"
+                  [style.background]="checkPassword('minlength') ? '#4ae7a5' : '#ababab'"
                 ></span>
                 <span class="text">8 Characters min.</span>
               </div>
               <div class="notification--item">
                 <span
                   class="icon-sm icon-check-circle"
-                  [style.background]="!password?.errors?.['pattern'] ? '#4ae7a5' : '#ababab'"
+                  [style.background]="checkPassword('pattern') ? '#4ae7a5' : '#ababab'"
                 ></span>
                 <span class="text">One number</span>
               </div>
@@ -86,7 +88,7 @@
       </div>
       <div class="submit-section">
         <div class="agreement-block">
-          <input type="checkbox" />
+          <input type="checkbox" formControlName="isChecked" />
           <span>
             By creating account, you agree to accept our Privacy Policy, Terms
             of Service and Notification settings.
